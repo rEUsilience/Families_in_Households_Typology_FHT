@@ -38,16 +38,16 @@ version 17.0 // set Stata version
 
 global SILC "/Users/alzbeta/Documents/Data/EU-SILC_merged" // to call the original SILC data
 global DATA "/Users/alzbeta/Documents/Data/EU-SILC/FHT_SILC" // to save the created data files
-global CODE "/Users/alzbeta/Library/CloudStorage/Box-Box/WORK/_KU LEUVEN/rEUsilience/Families_in_Households_Typology" // folder where the code is stored
+global CODE "/Users/alzbeta/Library/CloudStorage/Box-Box/WORK/_KU LEUVEN/rEUsilience/FHT_updated" // folder where the code is stored
 
 
 **# 	PREPARATION FOR FHT AND CONSTRUCTION OF FHT
 
 //global wave "10 11 12 13 14 15 16 17 18 19 20" // to switch between waves
-global wave "21"
+global wave "19"
 
-/* The following code can only be used once!
-use "$SILC/SILC2021_ver_2023_release1", clear 
+//The following code can only be used once!
+/*use "$SILC/SILC2021_ver_2023_release1", clear 
 gen inactive = inrange(rb211,3,8)
 save "$SILC/SILC2021_ver_2023_release1", replace
 

@@ -9,7 +9,7 @@ global csv_path "/Users/alzbeta/Documents/Data/EU-SILC_sourcedata/Cross"
 
 * setup files directory
 //global setup "/Users/alzbeta/Library/CloudStorage/Box-Box/WORK/_KU LEUVEN/rEUsilience/REU_datasets/REU_SILC_CS"
-global setup "/Users/alzbeta/Library/CloudStorage/Box-Box/WORK/_KU LEUVEN/rEUsilience/Families_in_Households_Typology/SILC setup files"
+global setup "/Users/alzbeta/Library/CloudStorage/Box-Box/WORK/_KU LEUVEN/rEUsilience/FHT_updated/SILC setup files"
 
 * destination for the .log and .dta files created via adjusted EU-SILC setup files in the "Setup_ver_2023_release1" folder
 global log "/Users/alzbeta/Documents/Data/EUSILC_log"
@@ -19,7 +19,7 @@ global log "/Users/alzbeta/Documents/Data/EUSILC_log"
 * transforms .csv files to .dta 
 
 //forval x = 2010/2021 { // !!!! <- adjust years !!!
-foreach x in 2021 {	
+foreach x in 2019 {	
 	foreach y in p r h d {
 		
 		run "$setup/`x'_cross_eu_silc_`y'_ver_2023_release1.do"
@@ -32,7 +32,7 @@ foreach x in 2021 {
 * format of the final data files: SILC`year'_ver_2022_release2.dta (e.g. SILC2014_ver_2022_release2.dta)
 
 //local time "10 11 12 13 14 15 16 17 18 19 20 21" // <- !!! adjust years !!!
-local time "21"
+local time "19"
 
 foreach t of local time {
 noisily: display "Preparing EU-SILC 20`t'" 

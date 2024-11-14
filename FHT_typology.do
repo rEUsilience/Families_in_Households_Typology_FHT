@@ -46,7 +46,7 @@ lab var dependent_child "Number of dependent children in the HH"
 egen sibs = max(siblings), by(country year hid)
 
 gen parent = (child1_id != .)
-lab var mother "R is a parent"
+lab var parent "R is a parent"
 
 gen complex = (parent == 1 & siblings != 0)
 egen complex_hh = max(complex), by(country year hid)
