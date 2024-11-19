@@ -41,7 +41,8 @@ drop dc
 
 * flag the children who can be classified as dependent
 gen dep = inrange(age,0,17) 
-replace dep = 1 if dep == 0 & inrange(age,18,24) & inrange(inactive,6,11) & father_id != .
+//replace dep = 1 if dep == 0 & inrange(age,18,24) & inrange(inactive,6,11) & father_id != .
+replace dep = 1 if dep == 0 & inrange(age,18,24) & inactive == 1 & father_id != .
 
 
 **# 		Create children's IDs
