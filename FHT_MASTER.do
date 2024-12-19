@@ -44,20 +44,21 @@ global CODE "/Users/alzbeta/Library/CloudStorage/Box-Box/WORK/_KU LEUVEN/rEUsili
 **# 	PREPARATION FOR FHT AND CONSTRUCTION OF FHT
 
 //global wave "10 11 12 13 14 15 16 17 18 19 20" // to switch between waves
-global wave "19"
-
+global wave "22"
+/*
 //The following code can only be used once!
-/*use "$SILC/SILC2021_ver_2023_release1", clear 
+use "$SILC/SILC2021_ver_2023_release1", clear 
 gen inactive = inrange(rb211,3,8)
 save "$SILC/SILC2021_ver_2023_release1", replace
-
+*/
 
 foreach x of global wave {
 	use "$SILC/SILC20`x'_ver_2023_release1", clear 
-	gen inactive = inrange(pl031,6,11)
+	//gen inactive = inrange(pl031,6,11) // pl031 was replaced by pl032 in 2021 (?)
+	gen inactive = inrange(pl032,3,8)
 	save "$SILC/SILC20`x'_ver_2023_release1", replace
 }
-*/
+
 
 foreach x of global wave {
 **# 	Data Input
@@ -138,3 +139,5 @@ foreach x of global wave {
 	erase "$DATA/silc20`x'_grandparent.dta"
 	erase "$DATA/silc20`x'_hhcomp.dta" 
 }
+
+save "$DATA/FHT_2022", replace
