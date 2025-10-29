@@ -27,8 +27,7 @@ forval x = 2010/2021 { // !!!! <- adjust years !!!
 * Merge files (r,p,h,d) for each year
 * format of the final data files: SILC`year'_ver_2022_release2.dta (e.g. SILC2014_ver_2022_release2.dta)
 
-//local time "10 11 12 13 14 15 16 17 18 19 20 21" // <- !!! adjust years !!!
-local time "10"
+local time "10 11 12 13 14 15 16 17 18 19 20 21" // <- !!! adjust years !!!
 
 foreach t of local time {
 noisily: display "Preparing EU-SILC 20`t'" 
