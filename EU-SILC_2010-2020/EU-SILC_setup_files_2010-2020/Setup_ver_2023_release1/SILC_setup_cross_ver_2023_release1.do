@@ -17,8 +17,7 @@ global log "/Users/alzbeta/Documents/Data/EUSILC_log"
 * create log files with var labels
 * transforms .csv files to .dta 
 
-//forval x = 2010/2021 { // !!!! <- adjust years !!!
-foreach x in 2010 {	
+forval x = 2010/2021 { // !!!! <- adjust years !!!
 	foreach y in p r h d {
 		
 		run "$setup/`x'_cross_eu_silc_`y'_ver_2023_release1.do"
